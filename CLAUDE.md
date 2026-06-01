@@ -14,4 +14,10 @@
 ## Regras
 - Falha por série, não global
 - NA → "indicador indisponível nesta semana"
-- Publicador só roda com revisao.md = "ok"  
+- Publicador só roda com revisao.md = "ok"
+
+## Convenções de formatação HTML (boletim.qmd)
+- YAML deve ter `html-math-method: plain` para desativar MathJax (o boletim não tem fórmulas)
+- Cifrões no texto Markdown: usar entidade HTML `&#36;` (ex: `R&#36;/US&#36;`)
+- Cifrões em strings R (ex: `fmt_real`): usar `paste0("R&#36; ", ...)` — nunca `"R$ "`
+- Motivo: MathJax interpreta pares de `$` como delimitadores de fórmula, corrompendo a renderização  
