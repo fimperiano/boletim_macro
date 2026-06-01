@@ -4,6 +4,7 @@ date: 2026-06-01
 format:
   html:
     html-math-method: plain
+from: markdown-tex_math_dollars
 ---
 
 ```{r setup, include=FALSE}
@@ -26,7 +27,7 @@ fmt <- function(x, digits = 2, suffix = "") {
 }
 
 fmt_pct  <- function(x) fmt(x, digits = 2, suffix = "%")
-fmt_real <- function(x) paste0("R&#36; ", fmt(x, digits = 4))
+fmt_real <- function(x) paste0("R$ ", fmt(x, digits = 4))
 fmt_pp   <- function(x) fmt(x, digits = 2, suffix = " p.p.")
 
 # --- IPCA ---
@@ -54,7 +55,7 @@ O Índice Nacional de Preços ao Consumidor Amplo (IPCA), divulgado pelo IBGE e 
 
 ## Câmbio
 
-A taxa de câmbio R&#36;/US&#36; (SGS 1) encerrou o último pregão disponível (29/05/2026) cotada a `r fmt_real(cambio_atual)`, acumulando depreciação de `r fmt_pct(cambio_mes)` em relação ao nível de aproximadamente 30 dias antes.
+A taxa de câmbio R$/US$ (SGS 1) encerrou o último pregão disponível (29/05/2026) cotada a `r fmt_real(cambio_atual)`, acumulando depreciação de `r fmt_pct(cambio_mes)` em relação ao nível de aproximadamente 30 dias antes.
 Comparativamente ao fechamento de 31 de dezembro de 2025, a moeda norte-americana acumula variação de `r fmt_pct(cambio_ano)` no ano — sinal negativo indica apreciação do real frente ao dólar no período. O comportamento recente do câmbio reflete a combinação do diferencial de juros doméstico elevado com o fluxo de capitais e o ambiente externo.
 
 ## Política Monetária — Selic

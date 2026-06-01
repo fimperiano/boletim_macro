@@ -17,7 +17,6 @@
 - Publicador só roda com revisao.md = "ok"
 
 ## Convenções de formatação HTML (boletim.qmd)
-- YAML deve ter `html-math-method: plain` para desativar MathJax (o boletim não tem fórmulas)
-- Cifrões no texto Markdown: usar entidade HTML `&#36;` (ex: `R&#36;/US&#36;`)
-- Cifrões em strings R (ex: `fmt_real`): usar `paste0("R&#36; ", ...)` — nunca `"R$ "`
-- Motivo: MathJax interpreta pares de `$` como delimitadores de fórmula, corrompendo a renderização  
+- YAML deve ter `html-math-method: plain` e `from: markdown-tex_math_dollars`
+- Com essas duas opções, `$` pode ser usado livremente no texto e em strings R (ex: `"R$ "`)
+- Motivo: o Pandoc processa `$...$` como fórmula inline antes do MathJax; desativar a extensão `tex_math_dollars` resolve no parser, não no renderer  
