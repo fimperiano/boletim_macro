@@ -37,35 +37,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="boletim_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="boletim_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -106,16 +77,16 @@ window.Quarto = {
 </section>
 <section id="câmbio" class="level2">
 <h2 class="anchored" data-anchor-id="câmbio">Câmbio</h2>
-<p>A taxa de câmbio R<span class="math inline">\(/US\)</span> (SGS 1) encerrou o último pregão disponível (29/05/2026) cotada a R$&nbsp;5,0569, acumulando depreciação de 1,17% em relação ao nível de aproximadamente 30 dias antes. Comparativamente ao fechamento de 31 de dezembro de 2025, a moeda norte-americana acumula variação de -8,10% no ano — sinal negativo indica apreciação do real frente ao dólar no período. O comportamento recente do câmbio reflete a combinação do diferencial de juros doméstico elevado com o fluxo de capitais e o ambiente externo.</p>
+<p>A taxa de câmbio R$/US$ (SGS 1) encerrou o último pregão disponível (29/05/2026) cotada a R$ 5,0569, acumulando depreciação de 1,17% em relação ao nível de aproximadamente 30 dias antes. Comparativamente ao fechamento de 31 de dezembro de 2025, a moeda norte-americana acumula variação de -8,10% no ano — sinal negativo indica apreciação do real frente ao dólar no período. O comportamento recente do câmbio reflete a combinação do diferencial de juros doméstico elevado com o fluxo de capitais e o ambiente externo.</p>
 </section>
 <section id="política-monetária-selic" class="level2">
 <h2 class="anchored" data-anchor-id="política-monetária-selic">Política Monetária — Selic</h2>
-<p>A taxa Selic meta, fixada pelo Comitê de Política Monetária (Copom) e coletada via SGS 432, encontra-se em 14,50% ao ano. O patamar elevado de juros reflete a condução da política monetária em modo contracionista, com o objetivo de convergir a inflação para a meta no horizonte relevante.</p>
+<p>A taxa Selic meta, fixada pelo Comitê de Política Monetária (Copom) e coletada via SGS 432, encontra-se em 14,50% a.a.. O patamar elevado de juros reflete a condução da política monetária em modo contracionista, com o objetivo de convergir a inflação para a meta no horizonte relevante.</p>
 </section>
 <section id="atividade-econômica-ibc-br" class="level2">
 <h2 class="anchored" data-anchor-id="atividade-econômica-ibc-br">Atividade Econômica — IBC-Br</h2>
-<p>O Índice de Atividade Econômica do Banco Central (IBC-Br) apontou, em março de 2026, variação mensal de -0,67% na série com ajuste sazonal (SGS 24364). O recuo na margem indica arrefecimento da atividade após o ajuste pelos efeitos de calendário e sazonalidade.</p>
-<p>Na comparação com períodos mais longos, com base na série original (SGS 24363), o IBC-Br acumula crescimento de 1,41% no ano e expansão de 1,81% nos últimos doze meses encerrados em março de 2026. A leitura interanual positiva sinaliza que, apesar do recuo pontual no mês, o nível de atividade segue em trajetória de crescimento moderado em relação ao mesmo período do ano anterior.</p>
+<p>O Índice de Atividade Econômica do Banco Central (IBC-Br) apontou, em março de 2026, variação mensal de -0,67% (IBC-Br com ajuste sazonal, SGS 24364). O recuo na margem indica arrefecimento da atividade após o ajuste pelos efeitos de calendário e sazonalidade.</p>
+<p>Na comparação com períodos mais longos, com base na série original (SGS 24363), o IBC-Br acumula crescimento de 9,62% (IBC-Br original, variação no ano, SGS 24363) e expansão de 3,07% nos últimos doze meses encerrados em março de 2026 (IBC-Br original, variação 12 meses, SGS 24363). A leitura interanual positiva sinaliza que, apesar do recuo pontual no mês, o nível de atividade segue em trajetória de crescimento moderado em relação ao mesmo período do ano anterior.</p>
 <hr>
 <p><em>Fontes: Banco Central do Brasil — Sistema Gerenciador de Séries Temporais (SGS); IBGE. Dados coletados via pacote <code>rbcb</code> (R). Referência: 01/06/2026.</em></p>
 </section>

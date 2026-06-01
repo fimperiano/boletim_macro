@@ -1,11 +1,11 @@
 indicador,periodo,valor,unidade,nota
-IPCA,var_mes,0.67,%,Referência: 2026-04-01
-IPCA,var_ano,2.6,%,Acumulado jan-Apr/2026 (produtório)
-IPCA,var_12m,4.39,%,Últimos 12 meses até 2026-04-01 (produtório)
-Cambio,valor_atual,5.0569,R$/US$,Último fechamento: 2026-05-29
-Cambio,var_mes,1.17,%,Vs ~30 dias atrás (2026-04-29)
-Cambio,var_ano,-8.1,%,Vs 31/12/2025
-Selic,valor_atual,14.5,% a.a.,Data: 2026-06-01
-IBC-Br,var_mes,-0.67,%,"Série SA (24364), ref. 2026-03-01"
-IBC-Br,var_ano,1.41,%,"Série original (24363), acum. ano 2026 vs 2025"
-IBC-Br,var_12m,1.81,%,"Série original (24363), últimos 12 meses vs 12 anteriores"
+IPCA,var_mes,0.67,%,Variacao mensal abr/2026 (SGS 433)
+IPCA,var_ano,2.60,%,Acumulado jan-abr/2026 via produtorio (SGS 433)
+IPCA,var_12m,4.39,%,Acumulado 12 meses mai/2025-abr/2026 via produtorio (SGS 433)
+Cambio,valor_atual,5.0569,R$/US$,Ultimo fechamento disponivel 2026-05-29 (SGS 1)
+Cambio,var_mes,1.17,%,Variacao vs ~30 dias atras (2026-04-29 = 4.9985) (SGS 1)
+Cambio,var_ano,-8.10,%,Variacao vs fechamento 2025-12-31 (5.5024) (SGS 1)
+Selic,valor_atual,14.5,% a.a.,Meta Selic em 2026-06-01 (SGS 432)
+IBC-Br,var_mes,-0.67,%,Variacao mensal serie SA mar/2026 vs fev/2026 (SGS 24364)
+IBC-Br,var_ano,9.62,%,Variacao nivel original mar/2026 vs dez/2025 (SGS 24363)
+IBC-Br,var_12m,3.07,%,Variacao nivel original mar/2026 vs mar/2025 (SGS 24363)

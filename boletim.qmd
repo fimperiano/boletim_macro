@@ -24,8 +24,8 @@ fmt <- function(x, digits = 2, suffix = "") {
 }
 
 fmt_pct  <- function(x) fmt(x, digits = 2, suffix = "%")
-fmt_real <- function(x) paste0("R$ ", fmt(x, digits = 4))
-fmt_pp   <- function(x) fmt(x, digits = 2, suffix = " p.p.")
+fmt_real <- function(x) paste0("R$ ", fmt(x, digits = 4))
+fmt_pp   <- function(x) fmt(x, digits = 2, suffix = " p.p.")
 
 # --- IPCA ---
 ipca_mes  <- get_val("IPCA", "var_mes")
@@ -41,9 +41,9 @@ cambio_ano   <- get_val("Cambio", "var_ano")
 selic <- get_val("Selic", "valor_atual")
 
 # --- IBC-Br ---
-ibc_mes  <- get_val("IBC-Br", "var_mes")
-ibc_ano  <- get_val("IBC-Br", "var_ano")
-ibc_12m  <- get_val("IBC-Br", "var_12m")
+ibc_var_mes <- get_val("IBC-Br", "var_mes")   # serie SA, SGS 24364
+ibc_var_ano <- get_val("IBC-Br", "var_ano")   # serie original, SGS 24363
+ibc_var_12m <- get_val("IBC-Br", "var_12m")   # serie original, SGS 24363
 ```
 
 ## Inflação — IPCA
@@ -52,18 +52,18 @@ O Índice Nacional de Preços ao Consumidor Amplo (IPCA), divulgado pelo IBGE e 
 
 ## Câmbio
 
-A taxa de câmbio R$/US$ (SGS 1) encerrou o último pregão disponível (29/05/2026) cotada a `r fmt_real(cambio_atual)`, acumulando depreciação de `r fmt_pct(cambio_mes)` em relação ao nível de aproximadamente 30 dias antes.
+A taxa de câmbio R\$/US\$ (SGS 1) encerrou o último pregão disponível (29/05/2026) cotada a `r fmt_real(cambio_atual)`, acumulando depreciação de `r fmt_pct(cambio_mes)` em relação ao nível de aproximadamente 30 dias antes.
 Comparativamente ao fechamento de 31 de dezembro de 2025, a moeda norte-americana acumula variação de `r fmt_pct(cambio_ano)` no ano — sinal negativo indica apreciação do real frente ao dólar no período. O comportamento recente do câmbio reflete a combinação do diferencial de juros doméstico elevado com o fluxo de capitais e o ambiente externo.
 
 ## Política Monetária — Selic
 
-A taxa Selic meta, fixada pelo Comitê de Política Monetária (Copom) e coletada via SGS 432, encontra-se em `r fmt_pct(selic)` ao ano. O patamar elevado de juros reflete a condução da política monetária em modo contracionista, com o objetivo de convergir a inflação para a meta no horizonte relevante.
+A taxa Selic meta, fixada pelo Comitê de Política Monetária (Copom) e coletada via SGS 432, encontra-se em `r fmt(selic, digits = 2, suffix = "% a.a.")`. O patamar elevado de juros reflete a condução da política monetária em modo contracionista, com o objetivo de convergir a inflação para a meta no horizonte relevante.
 
 ## Atividade Econômica — IBC-Br
 
-O Índice de Atividade Econômica do Banco Central (IBC-Br) apontou, em março de 2026, variação mensal de `r fmt_pct(ibc_mes)` na série com ajuste sazonal (SGS 24364). O recuo na margem indica arrefecimento da atividade após o ajuste pelos efeitos de calendário e sazonalidade.
+O Índice de Atividade Econômica do Banco Central (IBC-Br) apontou, em março de 2026, variação mensal de `r fmt_pct(ibc_var_mes)` (IBC-Br com ajuste sazonal, SGS 24364). O recuo na margem indica arrefecimento da atividade após o ajuste pelos efeitos de calendário e sazonalidade.
 
-Na comparação com períodos mais longos, com base na série original (SGS 24363), o IBC-Br acumula crescimento de `r fmt_pct(ibc_ano)` no ano e expansão de `r fmt_pct(ibc_12m)` nos últimos doze meses encerrados em março de 2026. A leitura interanual positiva sinaliza que, apesar do recuo pontual no mês, o nível de atividade segue em trajetória de crescimento moderado em relação ao mesmo período do ano anterior.
+Na comparação com períodos mais longos, com base na série original (SGS 24363), o IBC-Br acumula crescimento de `r fmt_pct(ibc_var_ano)` (IBC-Br original, variação no ano, SGS 24363) e expansão de `r fmt_pct(ibc_var_12m)` nos últimos doze meses encerrados em março de 2026 (IBC-Br original, variação 12 meses, SGS 24363). A leitura interanual positiva sinaliza que, apesar do recuo pontual no mês, o nível de atividade segue em trajetória de crescimento moderado em relação ao mesmo período do ano anterior.
 
 ---
 
