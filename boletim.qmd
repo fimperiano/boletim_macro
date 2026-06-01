@@ -48,45 +48,22 @@ ibc_12m  <- get_val("IBC-Br", "var_12m")
 
 ## Inflação — IPCA
 
-O Índice Nacional de Preços ao Consumidor Amplo (IPCA), divulgado pelo IBGE e
-coletado via SGS 433, registrou variação mensal de `r fmt_pct(ipca_mes)` em
-abril de 2026. No acumulado do ano (janeiro a abril de 2026), o índice acumula
-alta de `r fmt_pct(ipca_ano)`, enquanto a variação nos últimos doze meses
-atingiu `r fmt_pct(ipca_12m)`. O resultado de doze meses situa-se acima do
-centro da meta de inflação estabelecida pelo CMN (3,0% a.a.), porém dentro do
-intervalo de tolerância de 1,5 ponto percentual.
+O Índice Nacional de Preços ao Consumidor Amplo (IPCA), divulgado pelo IBGE e coletado via SGS 433, registrou variação mensal de `r fmt_pct(ipca_mes)` em abril de 2026. No acumulado do ano (janeiro a abril de 2026), o índice acumula alta de `r fmt_pct(ipca_ano)`, enquanto a variação nos últimos doze meses atingiu `r fmt_pct(ipca_12m)`. O resultado de doze meses situa-se acima do centro da meta de inflação estabelecida pelo CMN (3,0% a.a.), porém dentro do intervalo de tolerância de 1,5 ponto percentual.
 
 ## Câmbio
 
-A taxa de câmbio R$/US$ (SGS 1) encerrou o último pregão disponível
-(29/05/2026) cotada a `r fmt_real(cambio_atual)`, acumulando depreciação de
-`r fmt_pct(cambio_mes)` em relação ao nível de aproximadamente 30 dias antes.
-Comparativamente ao fechamento de 31 de dezembro de 2025, a moeda norte-americana
-acumula variação de `r fmt_pct(cambio_ano)` no ano — sinal negativo indica
-apreciação do real frente ao dólar no período. O comportamento recente do câmbio
-reflete a combinação do diferencial de juros doméstico elevado com o fluxo de
-capitais e o ambiente externo.
+A taxa de câmbio R$/US$ (SGS 1) encerrou o último pregão disponível (29/05/2026) cotada a `r fmt_real(cambio_atual)`, acumulando depreciação de `r fmt_pct(cambio_mes)` em relação ao nível de aproximadamente 30 dias antes.
+Comparativamente ao fechamento de 31 de dezembro de 2025, a moeda norte-americana acumula variação de `r fmt_pct(cambio_ano)` no ano — sinal negativo indica apreciação do real frente ao dólar no período. O comportamento recente do câmbio reflete a combinação do diferencial de juros doméstico elevado com o fluxo de capitais e o ambiente externo.
 
 ## Política Monetária — Selic
 
-A taxa Selic meta, fixada pelo Comitê de Política Monetária (Copom) e coletada
-via SGS 432, encontra-se em `r fmt_pct(selic)` ao ano. O patamar elevado de
-juros reflete a condução da política monetária em modo contracionista, com o
-objetivo de convergir a inflação para a meta no horizonte relevante.
+A taxa Selic meta, fixada pelo Comitê de Política Monetária (Copom) e coletada via SGS 432, encontra-se em `r fmt_pct(selic)` ao ano. O patamar elevado de juros reflete a condução da política monetária em modo contracionista, com o objetivo de convergir a inflação para a meta no horizonte relevante.
 
 ## Atividade Econômica — IBC-Br
 
-O Índice de Atividade Econômica do Banco Central (IBC-Br) apontou, em março de
-2026, variação mensal de `r fmt_pct(ibc_mes)` na série com ajuste sazonal
-(SGS 24364). O recuo na margem indica arrefecimento da atividade após o ajuste
-pelos efeitos de calendário e sazonalidade.
+O Índice de Atividade Econômica do Banco Central (IBC-Br) apontou, em março de 2026, variação mensal de `r fmt_pct(ibc_mes)` na série com ajuste sazonal (SGS 24364). O recuo na margem indica arrefecimento da atividade após o ajuste pelos efeitos de calendário e sazonalidade.
 
-Na comparação com períodos mais longos, com base na série original (SGS 24363),
-o IBC-Br acumula crescimento de `r fmt_pct(ibc_ano)` no ano e expansão de
-`r fmt_pct(ibc_12m)` nos últimos doze meses encerrados em março de 2026. A
-leitura interanual positiva sinaliza que, apesar do recuo pontual no mês, o
-nível de atividade segue em trajetória de crescimento moderado em relação ao
-mesmo período do ano anterior.
+Na comparação com períodos mais longos, com base na série original (SGS 24363), o IBC-Br acumula crescimento de `r fmt_pct(ibc_ano)` no ano e expansão de `r fmt_pct(ibc_12m)` nos últimos doze meses encerrados em março de 2026. A leitura interanual positiva sinaliza que, apesar do recuo pontual no mês, o nível de atividade segue em trajetória de crescimento moderado em relação ao mesmo período do ano anterior.
 
 ---
 
